@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New tab</title>
+    <style>
+        #main-search {
+            margin-left: auto;
+            margin-right: auto;
+            width: 204px;
+            text-align: center;
+        }
+        #search {
+            border-width: 3px;
+            border: solid black;
+            width: 204px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <br><br><br><br><br><br>
+        <div id="main-search">
+            <h1>Welcome back!</h1>
+            <div id="search">
+                <input type="text" id="searchBar" placeholder="Search">
+                <button onclick="search()">🔎︎</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        function search() {
+            var query = document.getElementById('searchBar').value;
+            var url = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
